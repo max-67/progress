@@ -1,0 +1,27 @@
+{
+  "name": "progress_app",
+  "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/max-67/progress.git"
+  },
+  "description": "Progress displays progress as a percentage (0-100) and displays the status.",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Ammosov Maxim",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.4",
+    "gh-pages": "^5.0.0",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "style-loader": "^3.3.3"
+  }
+}

@@ -1,0 +1,207 @@
+html {
+  --current-circle-perimeter: 314;
+  --circle-perimeter: 314;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.progress-title {
+  height: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 30px;
+}
+
+.switch input {
+  height: 30px;
+  margin: 0;
+  visibility: hidden;
+}
+
+.slider {
+  -webkit-tap-highlight-color: transparent;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(223, 229, 238);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(1, 91, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.spinner-secondary-circle {
+  fill: none;
+  stroke-width: 12px;
+  stroke: rgb(1, 91, 255);
+  stroke-dasharray: var(--circle-perimeter);
+  stroke-dashoffset: var(--current-circle-perimeter)
+}
+
+.spinner-main-circle {
+  fill: none;
+  stroke-width: 12px;
+  stroke: rgb(239, 243, 246);
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.svg-animate {
+  stroke-dashoffset: 78.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spinner-animation 1s linear infinite;
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-data {
+  border: 1px solid black;
+  height: 28px;
+  border-radius: 34px;
+  width: 46px;
+  font-size: 17px;
+  text-align: center;
+  padding: 0;
+}
+
+.input-data:focus-visible {
+  outline: rgb(1, 91, 255) auto  1px;
+}
+
+.svg-hide {
+  visibility: hidden;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: calc(100vh - 20px);
+}
+
+.progress-cell-content {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 36px;
+}
+
+.progress-cell-content:first-child {
+  justify-content: flex-end;
+}
+
+.progress-cell-content:last-child {
+  justify-content: flex-start;
+}
+
+.fields {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (orientation: landscape) and (min-width: 320px) {
+  .progress { 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .progress-cell-content:first-child {
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 16px;
+  }
+
+  .progress-cell-content:last-child {
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 16px;
+  }
+
+  .fields {
+    margin: 0;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 320px) {
+  .progress { 
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .progress-cell-content:first-child {
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 46px;
+  }
+
+  .progress-cell-content:last-child {
+    padding-top: 26px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .fields {
+    margin: 0 auto;
+  }
+}
+
