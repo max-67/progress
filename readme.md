@@ -1,8 +1,8 @@
 # Progress App
 "Progress" displays progress as a percentage (0-100) and displays the status.<br>
-Author: Ammosov Maxim (max-67)
+Author: Ammosov Maxim ([max-67](https://github.com/max-67))
 
-## App available on https://max-67.github.io/progress/
+## App available on https://max-67.github.io/progress
 
 ## Setup
 ```
