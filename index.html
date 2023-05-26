@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+</head>
+<body>
+  <div class="progress-title">
+    Progress
+  </div>
+  <div class="progress"> 
+    <div class="progress-cell-content">
+      <svg height="160" width="160" class="svg" id="svg">
+        <circle id="spinner_main_circle" cx="80" cy="80" r="65" class="spinner-main-circle"/>
+        <circle id="spinner_secondary_circle" cx="80" cy="80" r="65" class="spinner-secondary-circle"/>
+      </svg>
+    </div>
+    <div class="progress-cell-content">
+      <div class="fields">
+        <div class="field-group">
+          <input id="change-percent" type="number" value="50" class="input-data"/>
+          <label for="change-percent">
+            Value
+          </label>
+        </div>
+        <div class="field-group">
+          <label class="switch">
+            <input id="switch-animate" type="checkbox"/>
+            <span class="slider"></span>
+          </label>
+          <label for="switch-animate">
+            Animate
+          </label>
+        </div>
+        <div class="field-group">
+          <label class="switch">
+            <input id="switch-hide" type="checkbox"/>
+            <span class="slider"></span>
+          </label>
+          <label for="switch-hide">
+            Hide
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
