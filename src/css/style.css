@@ -84,7 +84,6 @@ input::-webkit-inner-spin-button {
 }
 
 .svg-animate {
-  stroke-dashoffset: 78.5;
   transform-box: fill-box;
   transform-origin: center;
   animation: spinner-animation 1s linear infinite;
